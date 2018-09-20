@@ -188,6 +188,31 @@ namespace FoodFinder.Models
             conn.Open;
 
             MySqlCommand cmd = CreateCommand() as MySqlCommand;
+            var cmd = @"SELECT * FROM cuisine;";
+
+            var rdr = cmd.ExecuteReader() as MySqlDataReader;
+            while(rdr.Read())
+            {
+                int CuisineId = rdr.GetInt32(0);
+                string CuisineName = rdr.GetString(1);
+                Cuisine newCuisine = new Cuisine(CuisineName, CuisineId);
+                allCategories.Add(newCuisine);
+            }
+
+            conn.Close();
+            if (conn != null)
+            {
+                conn.Dispose();
+            }
+            return allCuisine;
+        }
+        public static Cuisine Find(int id)
+        {
+            MySqlConnection conn = DB.Connection();
+            conn.Open();
+
+            var cmd = conn.CreateCommand() as MySqlCommand;
+            cmd.CommandText = @"SELECT * FROM cuisine WHERE id = @searchId;";
         }
     }
 }
