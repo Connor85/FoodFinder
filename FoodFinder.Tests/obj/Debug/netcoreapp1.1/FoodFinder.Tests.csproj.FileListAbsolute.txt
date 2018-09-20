@@ -1,0 +1,13 @@
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/FoodFinder.Tests.deps.json
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/FoodFinder.Tests.runtimeconfig.json
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/FoodFinder.Tests.runtimeconfig.dev.json
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/FoodFinder.Tests.dll
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/FoodFinder.Tests.pdb
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/FoodFinder.dll
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/bin/Debug/netcoreapp1.1/FoodFinder.pdb
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/obj/Debug/netcoreapp1.1/FoodFinder.Tests.AssemblyInfo.cs
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/obj/Debug/netcoreapp1.1/FoodFinder.Tests.dll
+/Users/Guest/Desktop/FoodFinder.Solution/FoodFinder.Tests/obj/Debug/netcoreapp1.1/FoodFinder.Tests.pdb
