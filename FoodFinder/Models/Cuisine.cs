@@ -111,5 +111,83 @@ namespace FoodFinder.Models
                 conn.Dispose();
             }
         }
+        public static Cuisine Find(int id)
+        {
+            MySqlConnection conn = DB.Connection();
+            conn.Open();
+
+            var cmd = conn.CreateCommand as MySqlCommand;
+            cmd.CommandText = @"SELECT * FROM cuisine WHERE id = @searchId;";
+
+            MySqlParameter searchId = new MySqlParameter();
+            searchId.ParameterName = "@searchId";
+            searchId.Value = id;
+            cmd.Parameters.Add(searchId);
+
+            var rdr = cmd.ExecuteReader() as MySqlDataReader;
+            int cuisineId = 0;
+            string cusisineName = "";
+            while (rdr.Read())
+            {
+                cuisineId = rdr.GetInt32(0);
+                cusisineName = rdr.GetString(1);
+            }
+            Cuisine newCuisine = new Cuisine(cuisineId, cusisineName);
+
+            conn.Close();
+            if (conn != null)
+            {
+                conn.Dispose();
+            }
+            return newCuisine;
+        }
+
+        public void Delete()
+        {
+            MySqlConnection conn = DB.Connection();
+            conn.Open();
+
+            var cmd = conn.CreateCommand() as MySqlCommand;
+            cmd.CommandText = @"DELETE FROM cuisine WHERE id = @thisId;";
+
+            MySqlParameter thisId = new MySqlParameter();
+            thisId.ParameterName = "@thisId";
+            thisId.Value = _id;
+            cmd.Parameters.Add(thisId);
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            if (conn != null)
+            {
+                conn.Dispose();
+            }
+        }
+
+        public static void DeleteAll()
+        {
+            MySqlConnection conn = DB.Connection();
+            conn.Open();
+
+            var cmd = conn.CreateCommand() as MySqlCommand;
+            cmd.CommandText = @"DELETE FROM cuisine;";
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            if (conn != null)
+            {
+                conn.Dispose();
+            }
+        }
+
+        public List<Cuisine> GetCuisine()
+        {
+            List<Cuisine> allCuisine = new List<Cuisine>;
+            MySqlConnection conn = DB.Connection();
+            conn.Open;
+
+            MySqlCommand cmd = CreateCommand() as MySqlCommand;
+        }
     }
 }
